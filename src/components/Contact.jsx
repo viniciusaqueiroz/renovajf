@@ -32,14 +32,35 @@ export default function Contact() {
             </div>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href={siteConfig.whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-4 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-600">
-                <FaWhatsapp className="h-5 w-5" /> WhatsApp
+              <a
+                href={siteConfig.whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                title="WhatsApp"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500 text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-600"
+              >
+                <FaWhatsapp className="h-5 w-5" />
               </a>
-              <a href={siteConfig.instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-pink-500 px-4 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-pink-600">
-                <FaInstagram className="h-5 w-5" /> Instagram
+              <a
+                href={siteConfig.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                title="Instagram"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-pink-500 text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-pink-600"
+              >
+                <FaInstagram className="h-5 w-5" />
               </a>
-              <a href={siteConfig.facebookUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-4 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700">
-                <FaFacebook className="h-5 w-5" /> Facebook
+              <a
+                href={siteConfig.facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                title="Facebook"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700"
+              >
+                <FaFacebook className="h-5 w-5" />
               </a>
             </div>
           </div>

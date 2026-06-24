@@ -11,6 +11,10 @@
     scroll-behavior: smooth;
   }
 
+  section[id] {
+    scroll-margin-top: 7rem;
+  }
+
   body,
   #root {
     min-height: 100%;
@@ -96,6 +100,10 @@
 @media (min-width: 1024px) {
   .section-title {
     font-size: 2.75rem;
+  }
+
+  section[id] {
+    scroll-margin-top: 8.5rem;
   }
 }
 
