@@ -4,8 +4,8 @@ import { siteConfig } from "../config/site";
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
+    <section id="contact" className="relative px-4 py-20 sm:px-6 lg:px-10 xl:px-12">
+      <div className="mx-auto w-full max-w-[1600px]">
         <div className="mb-12 text-center">
           <div className="section-kicker mx-auto">Contato</div>
           <h2 className="section-title mt-4">Entre em Contato</h2>

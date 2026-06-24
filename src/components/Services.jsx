@@ -38,8 +38,8 @@ const partners = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
+    <section id="services" className="relative px-4 py-20 sm:px-6 lg:px-10 xl:px-12">
+      <div className="mx-auto w-full max-w-[1600px]">
         <div className="mb-12 text-center">
           <div className="section-kicker mx-auto">Soluções</div>
           <h2 className="section-title mt-4">Serviços</h2>

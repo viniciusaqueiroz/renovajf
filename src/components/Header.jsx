@@ -20,9 +20,9 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="fixed left-0 top-0 z-50 w-full px-3 pt-3 sm:px-4 sm:pt-4">
+    <header className="fixed left-0 top-0 z-50 w-full px-3 pt-3 sm:px-4 sm:pt-4 xl:px-6">
       <div
-        className={`mx-auto max-w-7xl rounded-2xl border border-white/10 px-4 py-3 text-[#eef2ff] shadow-2xl shadow-black/25 backdrop-blur-xl transition-all duration-300 sm:px-6 ${
+        className={`mx-auto w-full max-w-[1600px] rounded-2xl border border-white/10 px-4 py-3 text-[#eef2ff] shadow-2xl shadow-black/25 backdrop-blur-xl transition-all duration-300 sm:px-6 ${
           isScrolled
             ? "bg-[#07111f]/85"
             : "bg-gradient-to-r from-[#081321]/85 via-[#101c33]/80 to-[#0b1525]/85"

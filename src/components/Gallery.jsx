@@ -1,62 +1,23 @@
 import { useEffect, useMemo, useState } from "react";
 
-const FEATURED_IMAGES = [
-  {
-    src: "/images/gallery/sofa-01.jpg",
-    alt: "Sofa green in a minimal room",
-    label: "Sofa",
-  },
-  {
-    src: "/images/gallery/armchair-01.jpg",
-    alt: "Blue armchair with a yellow lamp beside it",
-    label: "Poltrona",
-  },
-  {
-    src: "/images/gallery/sofa-02.jpg",
-    alt: "Beige sofa in a bright interior",
-    label: "Sofa",
-  },
-  {
-    src: "/images/gallery/chair-01.jpg",
-    alt: "Neutral upholstered chair with a wooden base",
-    label: "Cadeira",
-  },
-  {
-    src: "/images/gallery/chair-02.jpg",
-    alt: "White minimalist chair on a neutral background",
-    label: "Cadeira",
-  },
-  {
-    src: "/images/gallery/armchair-02.jpg",
-    alt: "Soft pink armchair in a playful set",
-    label: "Poltrona",
-  },
-  {
-    src: "/images/gallery/chair-03.jpg",
-    alt: "Modern fabric chair with wooden legs",
-    label: "Cadeira",
-  },
-  {
-    src: "/images/gallery/sofa-05.jpg",
-    alt: "Blue sofa in a contemporary interior",
-    label: "Sofa",
-  },
-  {
-    src: "/images/gallery/sofa-04.jpg",
-    alt: "Red sofa with a clean background",
-    label: "Sofa",
-  },
-  {
-    src: "/images/gallery/chair-04.jpg",
-    alt: "Office chair in a neutral studio setting",
-    label: "Cadeira",
-  },
-];
+const TOTAL_IMAGES = 20;
+const INITIAL_VISIBLE = 10;
+const BATCH_SIZE = 10;
 
-const INITIAL_VISIBLE = 8;
+const buildGallery = () =>
+  Array.from({ length: TOTAL_IMAGES }, (_, index) => {
+    const num = String(index + 1).padStart(2, "0");
+    const labels = ["Sofá", "Poltrona", "Sofá", "Cadeira", "Cadeira", "Poltrona", "Cadeira", "Sofá", "Sofá", "Cadeira"];
+
+    return {
+      src: `/images/gallery/gallery-${num}.jpg`,
+      alt: `Imagem de mobiliário ${index + 1}`,
+      label: labels[index % labels.length],
+    };
+  });
 
 export default function Gallery() {
-  const allImages = useMemo(() => FEATURED_IMAGES, []);
+  const allImages = useMemo(() => buildGallery(), []);
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
   const [selectedIndex, setSelectedIndex] = useState(null);
 
@@ -99,17 +60,17 @@ export default function Gallery() {
   }, [allImages, visibleCount]);
 
   return (
-    <section id="gallery" className="relative px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
+    <section id="gallery" className="relative px-4 py-20 sm:px-6 lg:px-10 xl:px-12">
+      <div className="mx-auto w-full max-w-[1600px]">
         <div className="mb-12 text-center">
           <div className="section-kicker mx-auto">Galeria</div>
           <h2 className="section-title mt-4">Nossos Trabalhos</h2>
           <p className="section-subtitle">
-            Uma mostra de alguns dos nossos projetos de design de interiores, incluindo sofás, poltronas e cadeiras. Cada peça é cuidadosamente selecionada para criar ambientes elegantes e confortáveis.
+            A galeria usa arquivos locais numerados para facilitar a troca por fotos reais no futuro, sem mexer no componente.
           </p>
         </div>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(160px,1fr))] gap-4 sm:gap-5 lg:gap-6">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-5 lg:gap-6">
           {visibleImages.map((item, index) => (
             <button
               key={item.src}
@@ -141,7 +102,8 @@ export default function Gallery() {
 
         <div className="mt-10 flex justify-center">
           <button
-            onClick={() => setVisibleCount(hasMore ? allImages.length : INITIAL_VISIBLE)}
+            type="button"
+            onClick={() => setVisibleCount(hasMore ? Math.min(allImages.length, visibleCount + BATCH_SIZE) : INITIAL_VISIBLE)}
             className="inline-flex items-center justify-center rounded-full bg-[#a21f3b] px-7 py-3.5 font-semibold text-white shadow-[0_18px_40px_rgba(162,31,59,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#bb2a4b]"
           >
             {hasMore ? "Ver mais imagens" : "Ver menos imagens"}
@@ -178,7 +140,7 @@ export default function Gallery() {
                 onClick={showNext}
                 className="rounded-full border border-white/10 bg-white/10 px-4 py-3 text-sm font-semibold backdrop-blur-md transition-all hover:bg-white/15"
               >
-                Proxima
+                Próxima
               </button>
             </div>
           </div>

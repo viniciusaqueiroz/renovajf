@@ -14,11 +14,14 @@
   body,
   #root {
     min-height: 100%;
+    width: 100%;
   }
 
   body {
     margin: 0;
     font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
     color: #e5e7eb;
     background:
       radial-gradient(circle at top, rgba(162, 31, 59, 0.14), transparent 25%),
@@ -50,11 +53,16 @@
   }
 
   .section-title {
-    @apply font-montserrat text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl;
+    font-family: Montserrat, Inter, system-ui, sans-serif;
+    font-size: clamp(2rem, 3vw, 4rem);
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #ffffff;
   }
 
   .section-subtitle {
-    @apply mx-auto mt-4 max-w-2xl text-sm leading-7 text-[#cbcbcb]/80 sm:text-base;
+    @apply mx-auto mt-4 max-w-3xl text-base leading-8 text-[#cbcbcb]/80 sm:text-lg;
   }
 
   .hero-scroll-button {

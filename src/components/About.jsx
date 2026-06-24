@@ -1,7 +1,7 @@
 ﻿export default function About() {
   return (
-    <section id="about" className="relative px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
+    <section id="about" className="relative px-4 py-20 sm:px-6 lg:px-10 xl:px-12">
+      <div className="mx-auto w-full max-w-[1600px]">
         <div className="mb-12 text-center">
           <div className="section-kicker mx-auto">Sobre nós</div>
           <h2 className="section-title mt-4">Nossa história e essência</h2>
