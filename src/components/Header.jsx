@@ -1,13 +1,10 @@
 ﻿import { useState, useEffect } from "react";
 
 const navItems = [
-  { href: "#solutions", label: "Soluções" },
-  { href: "#chairs", label: "Cadeiras" },
-  { href: "#parts", label: "Peças" },
-  { href: "#corporate", label: "Empresas" },
-  { href: "#fitness", label: "Academias" },
-  { href: "#clinics", label: "Clínicas" },
+  { href: "#hero", label: "Início" },
   { href: "#about", label: "Sobre" },
+  { href: "#gallery", label: "Galeria" },
+  { href: "#services", label: "Serviços" },
   { href: "#contact", label: "Contato" },
 ];
 
@@ -42,12 +39,12 @@ export default function Header() {
             />
           </a>
 
-          <nav className="hidden items-center gap-1 md:flex">
+          <nav className="hidden items-center gap-2 md:flex">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="rounded-full px-3 py-2 text-[13px] font-medium text-slate-200/90 transition-all duration-300 hover:bg-white/10 hover:text-white lg:px-4"
+                className="rounded-full px-4 py-2 text-sm font-medium text-slate-200/90 transition-all duration-300 hover:bg-white/10 hover:text-white"
               >
                 {item.label}
               </a>

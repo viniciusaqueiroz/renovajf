@@ -9,11 +9,10 @@
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 8.5rem;
   }
 
   section[id] {
-    scroll-margin-top: 8.5rem;
+    scroll-margin-top: 7rem;
   }
 
   body,
@@ -104,7 +103,7 @@
   }
 
   section[id] {
-    scroll-margin-top: 10rem;
+    scroll-margin-top: 8.5rem;
   }
 }
 

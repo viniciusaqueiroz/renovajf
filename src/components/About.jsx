@@ -1,5 +1,3 @@
-import { businessContent } from "../config/site";
-
 export default function About() {
   return (
     <section id="about" className="relative overflow-hidden px-4 py-16 sm:px-6 lg:px-8">
@@ -7,9 +5,11 @@ export default function About() {
 
       <div className="mx-auto w-full max-w-6xl">
         <div className="mb-10 text-center">
-          <div className="section-kicker mx-auto">{businessContent.about.kicker}</div>
-          <h2 className="section-title mt-4">{businessContent.about.title}</h2>
-          <p className="section-subtitle">{businessContent.about.subtitle}</p>
+          <div className="section-kicker mx-auto">Sobre nós</div>
+          <h2 className="section-title mt-4">Nossa história e essência</h2>
+          <p className="section-subtitle">
+            Tradição familiar, atendimento próximo e acabamento cuidadoso em cada peça.
+          </p>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-[1fr_1.15fr] lg:items-stretch">
@@ -17,7 +17,7 @@ export default function About() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(162,31,59,0.12),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.02),transparent_55%)]" />
             <div className="relative flex min-h-[420px] flex-col justify-between overflow-hidden rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(7,17,31,0.65),rgba(7,17,31,0.28))] p-5 sm:p-6 lg:p-8">
               <div className="flex items-center justify-between gap-3">
-                <div className="section-kicker mb-0 border-white/15 bg-black/20 text-white/80">Desde 1974</div>
+                <div className="section-kicker mb-0 border-white/15 bg-black/20 text-white/80">Desde 1958</div>
                 <div className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/60">
                   Juiz de Fora
                 </div>
@@ -65,7 +65,7 @@ export default function About() {
                 </p>
 
                 <p className="rounded-2xl border border-[#f3b0bd]/20 bg-[linear-gradient(180deg,rgba(162,31,59,0.08),rgba(255,255,255,0.03))] p-4 text-sm leading-7 text-[#e5e7eb]/85 sm:text-base">
-                  Anos depois, nasceu a <span className="font-semibold text-[#f3b0bd]">Renovadora de Estofados JF</span>, fundada por José Concolato e seus filhos na Rua Vitar Maria de Oliveira, 536 - Progresso. Hoje, sob a gestão de <span className="font-semibold text-white">Walmer Ribeiro Concolato</span> e <span className="font-semibold text-white">Wesley Ribeiro Concolato</span>, seguimos oferecendo qualidade e confiança que atravessam gerações.
+                  Anos depois, nasceu a <span className="font-semibold text-[#f3b0bd]">Renovadora de Estofados JF</span>, fundada por José Concolato e seus filhos na Rua Vitar Maria de Oliveira, 536 – Progresso. Hoje, sob a gestão de <span className="font-semibold text-white">Walmer Ribeiro Concolato</span> e <span className="font-semibold text-white">Wesley Ribeiro Concolato</span>, seguimos oferecendo qualidade e confiança que atravessam gerações.
                 </p>
               </div>
             </div>

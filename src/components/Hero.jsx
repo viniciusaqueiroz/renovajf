@@ -1,8 +1,8 @@
-import { businessContent, siteConfig } from "../config/site";
+import { siteConfig } from "../config/site";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative flex min-h-[100svh] overflow-hidden px-4 pt-24 sm:px-6 lg:px-10 xl:px-12">
+    <section id="hero" className="relative flex min-h-[92svh] overflow-hidden px-4 pt-24 sm:px-6 lg:px-10 xl:px-12">
       <div className="absolute inset-0">
         <img
           src="/images/hero-bg.jpg"
@@ -16,65 +16,53 @@ export default function Hero() {
         <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#07111f] to-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-center pb-28 pt-10 text-center sm:pb-32 lg:pb-36">
-        <div className="mx-auto max-w-4xl">
-          <div className="section-kicker mx-auto w-fit border-white/20 bg-black/20 text-white/80">Desde 1974</div>
-
-          <h1
-            className="mt-4 max-w-4xl font-montserrat text-5xl font-bold leading-none text-white sm:text-6xl lg:text-7xl"
-            style={{ textShadow: "0 18px 40px rgba(0,0,0,0.38)" }}
-          >
-            {siteConfig.siteName}
-          </h1>
-
-          <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-[#ebefff]/88 sm:text-lg lg:text-xl">
-            {businessContent.hero.headline}
-          </p>
-
-          <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-[#ebefff]/74 sm:text-base lg:text-lg">
-            {businessContent.hero.subheadline}
-          </p>
-
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
-            {businessContent.hero.badges.map((item) => (
-              <span
-                key={item}
-                className="rounded-full border border-white/15 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white/82 backdrop-blur-md"
-              >
-                {item}
-              </span>
-            ))}
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-center pb-20 pt-8 text-center sm:pb-24 lg:pb-28">
+        <div className="mx-auto max-w-3xl">
+          <div className="section-kicker mx-auto w-fit border-white/20 bg-black/20 text-white/80">
+            Desde 1958
           </div>
 
-          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
+          <h1
+            className="mt-4 max-w-3xl font-montserrat text-5xl font-bold leading-none text-white sm:text-6xl lg:text-7xl"
+            style={{ textShadow: "0 18px 40px rgba(0,0,0,0.38)" }}
+          >
+            A Renovadora de Estofados JF
+          </h1>
+
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[#ebefff]/86 sm:text-lg lg:text-xl">
+            A <span className="font-semibold text-white">{siteConfig.siteName}</span> transforma sofas, poltronas e cadeiras,
+            trazendo conforto e modernidade para sua casa.
+          </p>
+
+          <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
             <a
               href={siteConfig.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-[#a21f3b] px-7 py-3.5 font-semibold text-white shadow-[0_18px_40px_rgba(162,31,59,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#bb2a4b]"
             >
-              Falar no WhatsApp
+              Fale Conosco
             </a>
             <a
-              href="#solutions"
+              href="#about"
               onClick={(e) => {
                 e.preventDefault();
-                document.querySelector("#solutions")?.scrollIntoView({ behavior: "smooth" });
+                document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" });
               }}
               className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-3.5 font-semibold text-white/90 backdrop-blur-md transition-all duration-300 hover:bg-white/10"
             >
-              Ver solucoes
+              Conhecer a historia
             </a>
           </div>
 
-          <div className="mx-auto mt-10 grid max-w-2xl gap-4 sm:grid-cols-3">
+          <div className="mx-auto mt-8 grid max-w-2xl gap-4 sm:grid-cols-3">
             <div className="border-t border-white/20 pt-4">
               <p className="text-[10px] uppercase tracking-[0.3em] text-white/45">Tradicao</p>
-              <p className="mt-1 text-sm font-medium text-white/90">Desde 1974</p>
+              <p className="mt-1 text-sm font-medium text-white/90">Mais de 60 anos</p>
             </div>
             <div className="border-t border-white/20 pt-4">
               <p className="text-[10px] uppercase tracking-[0.3em] text-white/45">Atendimento</p>
-              <p className="mt-1 text-sm font-medium text-white/90">Corporativo e agil</p>
+              <p className="mt-1 text-sm font-medium text-white/90">Personalizado e agil</p>
             </div>
             <div className="border-t border-white/20 pt-4">
               <p className="text-[10px] uppercase tracking-[0.3em] text-white/45">Qualidade</p>
@@ -85,12 +73,12 @@ export default function Hero() {
       </div>
 
       <a
-        href="#solutions"
+        href="#about"
         onClick={(e) => {
           e.preventDefault();
-          document.querySelector("#solutions")?.scrollIntoView({ behavior: "smooth" });
+          document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" });
         }}
-        className="hero-scroll-button group absolute bottom-4 left-1/2 z-10 -translate-x-1/2 sm:bottom-5 lg:bottom-6"
+        className="hero-scroll-button absolute bottom-2 left-1/2 z-10 -translate-x-1/2 sm:bottom-3 lg:bottom-4"
         aria-label="Ir para a proxima secao"
       >
         <svg className="h-6 w-6 transition-transform duration-300 group-hover:translate-y-1" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">

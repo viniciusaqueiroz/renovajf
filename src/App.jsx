@@ -1,12 +1,8 @@
-import Header from "./components/Header";
+﻿import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Solutions from "./components/Solutions";
-import Gallery from "./components/Gallery";
-import Parts from "./components/Parts";
-import Corporate from "./components/Corporate";
-import Fitness from "./components/Fitness";
-import Clinics from "./components/Clinics";
 import About from "./components/About";
+import Gallery from "./components/Gallery";
+import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { siteConfig } from "./config/site";
@@ -23,13 +19,9 @@ function App() {
       <Header />
       <main className="relative">
         <Hero />
-        <Solutions />
-        <Gallery />
-        <Parts />
-        <Corporate />
-        <Fitness />
-        <Clinics />
         <About />
+        <Gallery />
+        <Services />
         <Contact />
       </main>
       <Footer />
