@@ -16,9 +16,9 @@ export default function Hero() {
         <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#07111f] to-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[1480px] items-center pb-14 pt-8 sm:pb-16 lg:pb-20">
-        <div className="max-w-3xl">
-          <div className="section-kicker w-fit border-white/20 bg-black/20 text-white/80">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-center pb-20 pt-8 text-center sm:pb-24 lg:pb-28">
+        <div className="mx-auto max-w-3xl">
+          <div className="section-kicker mx-auto w-fit border-white/20 bg-black/20 text-white/80">
             Desde 1958
           </div>
 
@@ -29,12 +29,12 @@ export default function Hero() {
             A Renovadora de Estofados JF
           </h1>
 
-          <p className="mt-5 max-w-2xl text-base leading-8 text-[#ebefff]/86 sm:text-lg lg:text-xl">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[#ebefff]/86 sm:text-lg lg:text-xl">
             A <span className="font-semibold text-white">{siteConfig.siteName}</span> transforma sofas, poltronas e cadeiras,
             trazendo conforto e modernidade para sua casa.
           </p>
 
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
             <a
               href={siteConfig.whatsappLink}
               target="_blank"
@@ -55,16 +55,16 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-8 grid gap-3 sm:grid-cols-3">
-            <div className="border-l border-white/20 pl-4">
+          <div className="mx-auto mt-8 grid max-w-2xl gap-4 sm:grid-cols-3">
+            <div className="border-t border-white/20 pt-4">
               <p className="text-[10px] uppercase tracking-[0.3em] text-white/45">Tradicao</p>
               <p className="mt-1 text-sm font-medium text-white/90">Mais de 60 anos</p>
             </div>
-            <div className="border-l border-white/20 pl-4">
+            <div className="border-t border-white/20 pt-4">
               <p className="text-[10px] uppercase tracking-[0.3em] text-white/45">Atendimento</p>
               <p className="mt-1 text-sm font-medium text-white/90">Personalizado e agil</p>
             </div>
-            <div className="border-l border-white/20 pl-4">
+            <div className="border-t border-white/20 pt-4">
               <p className="text-[10px] uppercase tracking-[0.3em] text-white/45">Qualidade</p>
               <p className="mt-1 text-sm font-medium text-white/90">Acabamento premium</p>
             </div>
@@ -78,7 +78,7 @@ export default function Hero() {
           e.preventDefault();
           document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" });
         }}
-        className="hero-scroll-button absolute bottom-5 left-1/2 z-10 -translate-x-1/2"
+        className="hero-scroll-button absolute bottom-2 left-1/2 z-10 -translate-x-1/2 sm:bottom-3 lg:bottom-4"
         aria-label="Ir para a proxima secao"
       >
         <svg className="h-6 w-6 transition-transform duration-300 group-hover:translate-y-1" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
