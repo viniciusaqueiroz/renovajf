@@ -1,0 +1,8 @@
+<svg width="512" height="256" viewBox="0 0 512 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="256" rx="32" fill="#FFFFFF"/>
+  <rect x="96" y="36" width="320" height="24" rx="8" fill="#0F4C8A"/>
+  <rect x="96" y="196" width="320" height="24" rx="8" fill="#0F4C8A"/>
+  <path d="M256 84L208 172H240L248 156H264L272 172H304L256 84Z" fill="#E21D2D"/>
+  <path d="M251 137H261L256 122L251 137Z" fill="#FFFFFF"/>
+  <text x="256" y="218" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" fill="#0F4C8A" letter-spacing="1">ARAUJO</text>
+</svg>

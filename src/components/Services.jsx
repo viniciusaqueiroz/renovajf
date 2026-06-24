@@ -31,9 +31,11 @@ const partners = [
   { src: "/images/parceiro1.png", alt: "Prefeitura de Juiz de Fora", className: "h-16" },
   { src: "/images/parceiro2.png", alt: "Cesama Agua é Vida", className: "h-20" },
   { src: "/images/parceiro3.png", alt: "Bahamas", className: "h-16" },
-  { src: "/images/parceiro4.png", alt: "Camara Municipal de Juiz de Fora", className: "h-16" },
   { src: "/images/parceiro5.svg", alt: "BD", className: "h-16" },
   { src: "/images/parceiro6.svg", alt: "Smart Fit", className: "h-16" },
+  { src: "/images/parceiros/araujo.svg", alt: "Drogaria Araujo", className: "h-14" },
+  { src: "/images/parceiros/bluefit.svg", alt: "Academia Bluefit", className: "h-14" },
+  { src: "/images/parceiros/baldi.svg", alt: "Baldi manufatura jf", className: "h-14" },
 ];
 
 export default function Services() {
