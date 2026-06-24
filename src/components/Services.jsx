@@ -38,9 +38,9 @@ const partners = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative px-4 py-20 sm:px-6 lg:px-10 xl:px-12">
-      <div className="mx-auto w-full max-w-[1600px]">
-        <div className="mb-12 text-center">
+    <section id="services" className="relative px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-6xl">
+        <div className="mb-10 text-center">
           <div className="section-kicker mx-auto">Soluções</div>
           <h2 className="section-title mt-4">Serviços</h2>
           <p className="section-subtitle">
@@ -48,35 +48,35 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {services.map((service) => (
-            <div key={service.title} className="premium-card premium-card-hover h-full p-6 text-center">
-              <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white/5">
+            <div key={service.title} className="premium-card premium-card-hover h-full p-5 text-center">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5">
                 <img src={service.icon} alt={service.title} className="h-8 w-8 object-contain filter invert brightness-0" />
               </div>
-              <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-              <p className="mt-3 leading-8 text-[#e5e7eb]/85">{service.text}</p>
+              <h3 className="text-lg font-semibold text-white">{service.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-[#e5e7eb]/85 sm:text-base">{service.text}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center">
+        <div className="mt-10 flex justify-center">
           <a
             href={siteConfig.catalogPdf}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full bg-[#a21f3b] px-7 py-3.5 font-semibold text-white shadow-[0_18px_40px_rgba(162,31,59,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#bb2a4b]"
           >
-            📑 Catálogo de Cadeiras
+            Catalogo de Cadeiras
           </a>
         </div>
 
-        <div className="mt-20">
-          <div className="mb-8 text-center">
-            <h3 className="text-2xl font-semibold text-white sm:text-3xl">Nossos Parceiros</h3>
+        <div className="mt-14">
+          <div className="mb-6 text-center">
+            <h3 className="text-2xl font-semibold text-white">Nossos Parceiros</h3>
           </div>
 
-          <div className="premium-panel p-5 sm:p-6">
+          <div className="premium-panel p-4 sm:p-5">
             <Swiper
               modules={[Autoplay]}
               autoplay={{ delay: 2000, disableOnInteraction: false }}
@@ -92,7 +92,7 @@ export default function Services() {
             >
               {partners.map((partner) => (
                 <SwiperSlide key={partner.alt}>
-                  <div className="flex h-28 items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-4 py-4 backdrop-blur-md">
+                  <div className="flex h-24 items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-4 py-4 backdrop-blur-md">
                     <img src={partner.src} alt={partner.alt} className={`${partner.className} object-contain ${partner.src.endsWith('.png') ? 'filter invert brightness-0' : ''}`} />
                   </div>
                 </SwiperSlide>

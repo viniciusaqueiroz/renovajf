@@ -37,15 +37,15 @@
 
 @layer components {
   .premium-panel {
-    @apply rounded-3xl border border-white/10 bg-white/5 shadow-[0_20px_60px_rgba(0,0,0,0.28)] backdrop-blur-xl;
+    @apply rounded-2xl border border-white/10 bg-white/5 shadow-[0_14px_36px_rgba(0,0,0,0.22)] backdrop-blur-xl;
   }
 
   .premium-card {
-    @apply rounded-2xl border border-white/10 bg-white/5 shadow-[0_18px_40px_rgba(0,0,0,0.22)] backdrop-blur-xl transition-all duration-300;
+    @apply rounded-2xl border border-white/10 bg-white/5 shadow-[0_12px_28px_rgba(0,0,0,0.18)] backdrop-blur-xl transition-all duration-300;
   }
 
   .premium-card-hover {
-    @apply hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.08] hover:shadow-[0_24px_56px_rgba(0,0,0,0.3)];
+    @apply hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.08] hover:shadow-[0_16px_36px_rgba(0,0,0,0.24)];
   }
 
   .section-kicker {
@@ -54,15 +54,15 @@
 
   .section-title {
     font-family: Montserrat, Inter, system-ui, sans-serif;
-    font-size: clamp(2rem, 3vw, 4rem);
-    line-height: 1.05;
+    font-size: 2rem;
+    line-height: 1.12;
     font-weight: 700;
     letter-spacing: 0;
     color: #ffffff;
   }
 
   .section-subtitle {
-    @apply mx-auto mt-4 max-w-3xl text-base leading-8 text-[#cbcbcb]/80 sm:text-lg;
+    @apply mx-auto mt-3 max-w-2xl text-sm leading-7 text-[#cbcbcb]/80 sm:text-base;
   }
 
   .hero-scroll-button {
@@ -84,6 +84,18 @@
   .hero-scroll-button:hover {
     @apply -translate-y-0.5 border-white/25;
     background: linear-gradient(180deg, rgba(255,255,255,0.24), rgba(255,255,255,0.08));
+  }
+}
+
+@media (min-width: 640px) {
+  .section-title {
+    font-size: 2.375rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: 2.75rem;
   }
 }
 

@@ -52,23 +52,23 @@ export default function Gallery() {
   }, [selectedIndex]);
 
   return (
-    <section id="gallery" className="relative px-4 py-20 sm:px-6 lg:px-10 xl:px-12">
-      <div className="mx-auto w-full max-w-[1600px]">
-        <div className="mb-12 text-center">
+    <section id="gallery" className="relative px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-6xl">
+        <div className="mb-10 text-center">
           <div className="section-kicker mx-auto">Galeria</div>
           <h2 className="section-title mt-4">Nossos Trabalhos</h2>
           <p className="section-subtitle">
-            Arquivos locais numerados para facilitar a troca por fotos reais no futuro, sem mexer no componente.
+            Confira alguns dos nossos trabalhos de mobiliário e decoração, feitos com dedicação e atenção aos detalhes.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-5 lg:gap-6">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
           {visibleImages.map((item, index) => (
             <button
               key={item.src}
               type="button"
               onClick={() => openImage(index)}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 text-left shadow-[0_18px_40px_rgba(0,0,0,0.24)] transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_26px_60px_rgba(0,0,0,0.32)]"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-left shadow-[0_12px_28px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-0.5 hover:border-white/20 hover:shadow-[0_16px_36px_rgba(0,0,0,0.24)]"
             >
               <div className="relative aspect-[4/5] overflow-hidden">
                 <img
@@ -80,12 +80,12 @@ export default function Gallery() {
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,17,31,0.05),rgba(7,17,31,0.78))] opacity-90 transition-opacity duration-300 group-hover:opacity-100" />
-                <div className="absolute inset-x-0 bottom-0 p-4 text-white">
+                <div className="absolute inset-x-0 bottom-0 p-3 text-white">
                   <div className="flex items-center justify-between gap-3">
-                    <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-white/80">
+                    <span className="rounded-full border border-white/15 bg-white/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/80">
                       {item.label}
                     </span>
-                    <span className="text-xs text-white/70">Ver detalhes</span>
+                    <span className="hidden text-xs text-white/70 sm:inline">Ver detalhes</span>
                   </div>
                 </div>
               </div>
@@ -93,7 +93,7 @@ export default function Gallery() {
           ))}
         </div>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-8 flex justify-center">
           <button
             type="button"
             onClick={() => setVisibleCount(hasMore ? Math.min(allImages.length, visibleCount + BATCH_SIZE) : INITIAL_VISIBLE)}

@@ -4,9 +4,9 @@ import { siteConfig } from "../config/site";
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative px-4 py-20 sm:px-6 lg:px-10 xl:px-12">
-      <div className="mx-auto w-full max-w-[1600px]">
-        <div className="mb-12 text-center">
+    <section id="contact" className="relative px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-6xl">
+        <div className="mb-10 text-center">
           <div className="section-kicker mx-auto">Contato</div>
           <h2 className="section-title mt-4">Entre em Contato</h2>
           <p className="section-subtitle">
@@ -14,20 +14,20 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="premium-panel p-6 sm:p-8">
-            <div className="space-y-6 text-base sm:text-lg">
+        <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="premium-panel p-5 sm:p-6">
+            <div className="space-y-4 text-base">
               <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
                 <HiOutlineLocationMarker className="mt-0.5 h-6 w-6 shrink-0 text-[#f0b4bf]" />
-                <p className="leading-8 text-[#e5e7eb]/85">{siteConfig.contactAddress}</p>
+                <p className="leading-7 text-[#e5e7eb]/85">{siteConfig.contactAddress}</p>
               </div>
               <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
                 <HiOutlinePhone className="mt-0.5 h-6 w-6 shrink-0 text-[#f0b4bf]" />
-                <p className="leading-8 text-[#e5e7eb]/85">{siteConfig.contactPhone}</p>
+                <p className="leading-7 text-[#e5e7eb]/85">{siteConfig.contactPhone}</p>
               </div>
               <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
                 <HiOutlineMail className="mt-0.5 h-6 w-6 shrink-0 text-[#f0b4bf]" />
-                <p className="leading-8 text-[#e5e7eb]/85">{siteConfig.contactEmail}</p>
+                <p className="leading-7 text-[#e5e7eb]/85">{siteConfig.contactEmail}</p>
               </div>
             </div>
 
@@ -44,7 +44,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <form className="premium-panel p-6 sm:p-8">
+          <form className="premium-panel p-5 sm:p-6">
             <div className="grid gap-4">
               <input type="text" placeholder="Seu nome" className="w-full rounded-2xl border border-white/10 bg-white/5 p-4 text-white placeholder:text-white/45 outline-none transition-all duration-300 focus:border-[#f0b4bf]/50 focus:bg-white/[0.08] focus:ring-2 focus:ring-[#a21f3b]/30" />
               <input type="email" placeholder="Seu e-mail" className="w-full rounded-2xl border border-white/10 bg-white/5 p-4 text-white placeholder:text-white/45 outline-none transition-all duration-300 focus:border-[#f0b4bf]/50 focus:bg-white/[0.08] focus:ring-2 focus:ring-[#a21f3b]/30" />
