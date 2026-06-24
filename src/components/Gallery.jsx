@@ -7,11 +7,11 @@ const BATCH_SIZE = 10;
 const buildGallery = () =>
   Array.from({ length: TOTAL_IMAGES }, (_, index) => {
     const num = String(index + 1).padStart(2, "0");
-    const labels = ["Sofá", "Poltrona", "Sofá", "Cadeira", "Cadeira", "Poltrona", "Cadeira", "Sofá", "Sofá", "Cadeira"];
+    const labels = ["Sofa", "Poltrona", "Sofa", "Cadeira", "Cadeira", "Poltrona", "Cadeira", "Sofa", "Sofa", "Cadeira"];
 
     return {
       src: `/images/gallery/gallery-${num}.jpg`,
-      alt: `Imagem de mobiliário ${index + 1}`,
+      alt: `Imagem de mobiliario ${index + 1}`,
       label: labels[index % labels.length],
     };
   });
@@ -51,14 +51,6 @@ export default function Gallery() {
     };
   }, [selectedIndex]);
 
-  useEffect(() => {
-    const preload = allImages.slice(0, Math.min(allImages.length, visibleCount + 4));
-    preload.forEach((item) => {
-      const img = new Image();
-      img.src = item.src;
-    });
-  }, [allImages, visibleCount]);
-
   return (
     <section id="gallery" className="relative px-4 py-20 sm:px-6 lg:px-10 xl:px-12">
       <div className="mx-auto w-full max-w-[1600px]">
@@ -66,7 +58,7 @@ export default function Gallery() {
           <div className="section-kicker mx-auto">Galeria</div>
           <h2 className="section-title mt-4">Nossos Trabalhos</h2>
           <p className="section-subtitle">
-            A galeria usa arquivos locais numerados para facilitar a troca por fotos reais no futuro, sem mexer no componente.
+            Arquivos locais numerados para facilitar a troca por fotos reais no futuro, sem mexer no componente.
           </p>
         </div>
 
@@ -84,6 +76,7 @@ export default function Gallery() {
                   alt={item.alt}
                   loading="lazy"
                   decoding="async"
+                  sizes="(min-width: 1024px) 20vw, (min-width: 640px) 33vw, 50vw"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,17,31,0.05),rgba(7,17,31,0.78))] opacity-90 transition-opacity duration-300 group-hover:opacity-100" />
@@ -140,7 +133,7 @@ export default function Gallery() {
                 onClick={showNext}
                 className="rounded-full border border-white/10 bg-white/10 px-4 py-3 text-sm font-semibold backdrop-blur-md transition-all hover:bg-white/15"
               >
-                Próxima
+                Proxima
               </button>
             </div>
           </div>
