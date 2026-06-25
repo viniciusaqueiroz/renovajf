@@ -1,11 +1,11 @@
 ﻿import { useState, useEffect } from "react";
 
 const navItems = [
-  { href: "#hero", label: "Início" },
-  { href: "#about", label: "Sobre" },
-  { href: "#gallery", label: "Galeria" },
-  { href: "#services", label: "Serviços" },
-  { href: "#contact", label: "Contato" },
+  { href: "#hero-kicker", label: "Início" },
+  { href: "#about-kicker", label: "Sobre" },
+  { href: "#gallery-kicker", label: "Galeria" },
+  { href: "#services-kicker", label: "Serviços" },
+  { href: "#contact-kicker", label: "Contato" },
 ];
 
 export default function Header() {
@@ -29,7 +29,7 @@ export default function Header() {
         }`}
       >
         <div className="flex items-center justify-between gap-4">
-          <a href="#hero" className="inline-flex items-center gap-3 transition-transform duration-300 hover:scale-[1.02]">
+          <a href="#hero-kicker" className="inline-flex items-center gap-3 transition-transform duration-300 hover:scale-[1.02]">
             <img
               src="/images/logo-branca.png"
               alt="Logo RenovaJF"
@@ -41,12 +41,13 @@ export default function Header() {
 
           <nav className="hidden items-center gap-2 md:flex">
             {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="rounded-full px-4 py-2 text-sm font-medium text-slate-200/90 transition-all duration-300 hover:bg-white/10 hover:text-white"
-              >
-                {item.label}
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="rounded-full px-4 py-2 text-sm font-medium text-slate-200/90 transition-all duration-300 hover:bg-white/10 hover:text-white"
+                >
+                  {item.label}
               </a>
             ))}
           </nav>

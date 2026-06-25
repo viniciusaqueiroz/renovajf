@@ -5,10 +5,12 @@ export default function About() {
 
       <div className="mx-auto w-full max-w-6xl">
         <div className="mb-10 text-center">
-          <div className="section-kicker mx-auto">Sobre nós</div>
-          <h2 className="section-title mt-4">Nossa história e essência</h2>
+          <div id="about-kicker" className="section-kicker mx-auto" style={{ scrollMarginTop: "6.5rem" }}>
+            Sobre nós
+          </div>
+          <h2 className="section-title mt-4">Tradição em manutenção técnica e conforto</h2>
           <p className="section-subtitle">
-            Tradição familiar, atendimento próximo e acabamento cuidadoso em cada peça.
+            Atendimento cuidadoso para cadeiras de trabalho, peças, estofados de academia e renovação pontual de sofás.
           </p>
         </div>
 
@@ -33,16 +35,16 @@ export default function About() {
 
               <div className="grid gap-3 sm:grid-cols-3">
                 <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-white/45">Tradição</p>
-                  <p className="mt-1 text-sm font-medium text-white/90">Mais de 60 anos</p>
+                  <p className="text-[10px] uppercase tracking-[0.28em] text-white/45">Cadeiras</p>
+                  <p className="mt-1 text-sm font-medium text-white/90">Reparo e revenda</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-white/45">Atendimento</p>
-                  <p className="mt-1 text-sm font-medium text-white/90">Personalizado e ágil</p>
+                  <p className="text-[10px] uppercase tracking-[0.28em] text-white/45">Peças</p>
+                  <p className="mt-1 text-sm font-medium text-white/90">Reposição ágil</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-white/45">Qualidade</p>
-                  <p className="mt-1 text-sm font-medium text-white/90">Acabamento premium</p>
+                  <p className="text-[10px] uppercase tracking-[0.28em] text-white/45">Técnico</p>
+                  <p className="mt-1 text-sm font-medium text-white/90">Uso intenso</p>
                 </div>
               </div>
             </div>
@@ -52,20 +54,20 @@ export default function About() {
             <div className="premium-panel overflow-hidden p-5 sm:p-6 lg:p-8">
               <div className="mb-5 flex items-center justify-between gap-4">
                 <h3 className="font-montserrat text-2xl font-semibold text-white">
-                  Um pouco da nossa História
+                  Um pouco da nossa história
                 </h3>
                 <span className="hidden rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.26em] text-white/55 sm:inline">
-                  Legado artesanal
+                  Tradição técnica
                 </span>
               </div>
 
               <div className="grid gap-4">
                 <p className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm leading-7 text-[#e5e7eb]/85 sm:text-base">
-                  Nossa trajetória começou em 1958, quando o italiano <span className="font-semibold text-white">Antonio Concolato</span> iniciou o trabalho artesanal de reforma de sofás em sua residência. Com o domínio passado aos filhos <span className="font-semibold text-white">José</span> e <span className="font-semibold text-white">Luiz</span>, surgiu em 1974 a Renovadora de Estofados JL Ltda., onde atuaram por 20 anos na Rua Benjamin Constant.
+                  Nossa trajetória começou em 1958, quando o italiano <span className="font-semibold text-white">Antonio Concolato</span> iniciou o trabalho artesanal de reforma de sofás em sua residência. A experiência passada entre gerações deu origem a uma empresa reconhecida pelo cuidado com estrutura, espuma, acabamento e conforto.
                 </p>
 
                 <p className="rounded-2xl border border-[#f3b0bd]/20 bg-[linear-gradient(180deg,rgba(162,31,59,0.08),rgba(255,255,255,0.03))] p-4 text-sm leading-7 text-[#e5e7eb]/85 sm:text-base">
-                  Anos depois, nasceu a <span className="font-semibold text-[#f3b0bd]">Renovadora de Estofados JF</span>, fundada por José Concolato e seus filhos na Rua Vitar Maria de Oliveira, 536 – Progresso. Hoje, sob a gestão de <span className="font-semibold text-white">Walmer Ribeiro Concolato</span> e <span className="font-semibold text-white">Wesley Ribeiro Concolato</span>, seguimos oferecendo qualidade e confiança que atravessam gerações.
+                  Hoje, a <span className="font-semibold text-[#f3b0bd]">Renovadora de Estofados JF</span> concentra sua atuação em manutenção, revenda e peças para cadeiras de escritório e trabalho, além da manutenção de estofados técnicos em aparelhos de academia. A renovação de sofás permanece como serviço complementar, com o mesmo padrão de acabamento.
                 </p>
               </div>
             </div>
@@ -82,7 +84,7 @@ export default function About() {
                   <h4 className="text-xl font-semibold text-white">Missão</h4>
                 </div>
                 <p className="mt-4 text-sm leading-7 text-[#e5e7eb]/84 sm:text-base">
-                  Entregar soluções em reforma de móveis e estofados com excelência, combinando qualidade, cuidado artesanal e atendimento comprometido, para garantir a total satisfação dos nossos clientes.
+                  Entregar soluções para cadeiras, peças e estofados técnicos com excelência, combinando atendimento comprometido, durabilidade e acabamento profissional.
                 </p>
               </div>
 
@@ -98,7 +100,7 @@ export default function About() {
                   <h4 className="text-xl font-semibold text-white">Visão</h4>
                 </div>
                 <p className="mt-4 text-sm leading-7 text-[#e5e7eb]/84 sm:text-base">
-                  Tornar-se uma empresa reconhecida como referência em estofamento e reforma de móveis, destacando-se pela inovação, qualidade e confiança no atendimento.
+                  Ser referência em Juiz de Fora para manutenção de cadeiras, fornecimento de peças e serviços técnicos para ambientes de trabalho e academias.
                 </p>
               </div>
             </div>

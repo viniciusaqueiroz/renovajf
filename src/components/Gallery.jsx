@@ -7,11 +7,11 @@ const BATCH_SIZE = 10;
 const buildGallery = () =>
   Array.from({ length: TOTAL_IMAGES }, (_, index) => {
     const num = String(index + 1).padStart(2, "0");
-    const labels = ["Sofa", "Poltrona", "Sofa", "Cadeira", "Cadeira", "Poltrona", "Cadeira", "Sofa", "Sofa", "Cadeira"];
+    const labels = ["Cadeira", "Peças", "Cadeira", "Academia", "Cadeira", "Escritório", "Peças", "Estofado técnico", "Sofá", "Cadeira"];
 
     return {
       src: `/images/gallery/gallery-${num}.jpg`,
-      alt: `Imagem de mobiliario ${index + 1}`,
+      alt: `Imagem de cadeira, peça ou estofado técnico ${index + 1}`,
       label: labels[index % labels.length],
     };
   });
@@ -55,10 +55,12 @@ export default function Gallery() {
     <section id="gallery" className="relative px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto w-full max-w-6xl">
         <div className="mb-10 text-center">
-          <div className="section-kicker mx-auto">Galeria</div>
-          <h2 className="section-title mt-4">Nossos Trabalhos</h2>
+          <div id="gallery-kicker" className="section-kicker mx-auto" style={{ scrollMarginTop: "6.5rem" }}>
+            Galeria
+          </div>
+          <h2 className="section-title mt-4">Cadeiras, peças e estofados técnicos</h2>
           <p className="section-subtitle">
-            Confira alguns dos nossos trabalhos de mobiliário e decoração, feitos com dedicação e atenção aos detalhes.
+            Confira referências de cadeiras de trabalho, componentes, estofados para academia e alguns serviços de renovação de sofás.
           </p>
         </div>
 
@@ -133,7 +135,7 @@ export default function Gallery() {
                 onClick={showNext}
                 className="rounded-full border border-white/10 bg-white/10 px-4 py-3 text-sm font-semibold backdrop-blur-md transition-all hover:bg-white/15"
               >
-                Proxima
+                Próxima
               </button>
             </div>
           </div>

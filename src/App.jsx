@@ -1,4 +1,5 @@
-﻿import Header from "./components/Header";
+import { useEffect } from "react";
+import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Gallery from "./components/Gallery";
@@ -11,6 +12,38 @@ import "swiper/css";
 import "swiper/css/autoplay";
 
 function App() {
+  useEffect(() => {
+    const sections = document.querySelectorAll("main section[id]");
+
+    if (!sections.length) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      sections.forEach((section) => section.classList.add("scroll-reveal-visible"));
+      return;
+    }
+
+    sections.forEach((section) => section.classList.add("scroll-reveal"));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("scroll-reveal-visible");
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "-12% 0px -18% 0px",
+        threshold: 0.16,
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-[#07111f] text-slate-100">
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(162,31,59,0.18),transparent_28%),radial-gradient(circle_at_top_right,rgba(20,28,64,0.55),transparent_35%),linear-gradient(180deg,#07111f_0%,#09192d_52%,#06101b_100%)]" />
