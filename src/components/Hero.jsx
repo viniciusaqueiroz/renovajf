@@ -78,14 +78,14 @@ export default function Hero() {
             className="section-kicker mx-auto w-fit border-white/20 bg-black/20 text-white/80"
             style={{ scrollMarginTop: "6.5rem" }}
           >
-            Desde 1958
+            Desde 1974
           </div>
 
           <h1
             className="mt-4 max-w-3xl font-montserrat text-4xl font-bold leading-none text-white sm:text-5xl lg:text-6xl 2xl:text-[4.25rem]"
             style={{ textShadow: "0 18px 40px rgba(0,0,0,0.58)" }}
           >
-            Cadeiras, peças e manutenção para ambientes de trabalho
+            A Renovadora JF
           </h1>
 
           <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[#ebefff]/90 sm:text-lg lg:text-xl">

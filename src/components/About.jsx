@@ -1,110 +1,167 @@
+import {
+  HiOutlineCalendar,
+  HiOutlineCube,
+  HiOutlineLocationMarker,
+  HiOutlineSparkles,
+  HiOutlineStar,
+} from "react-icons/hi";
+import { FaChair, FaTools } from "react-icons/fa";
+import { MdOutlineAdsClick, MdOutlineVisibility } from "react-icons/md";
+
+const timelineItems = [
+  {
+    year: "1974",
+    text: (
+      <>
+        O italiano <span className="font-semibold text-white">Antônio Concolato</span> inicia o trabalho artesanal de reforma
+        de sofás em sua residência em Juiz de Fora, com atenção minuciosa ao acabamento.
+      </>
+    ),
+  },
+  {
+    year: "Hoje",
+    text: (
+      <>
+        A <span className="font-semibold text-white">Renovadora de Estofados JF</span> concentra sua atuação em manutenção,
+        revenda e peças para cadeiras de escritório e trabalho, aparelhos de academia e renovação pontual de sofás.
+      </>
+    ),
+  },
+];
+
+const quickStats = [
+  {
+    icon: FaChair,
+    title: "Cadeiras",
+    text: "Reparo e revenda",
+  },
+  {
+    icon: HiOutlineCube,
+    title: "Peças",
+    text: "Reposição ágil",
+  },
+  {
+    icon: FaTools,
+    title: "Técnico",
+    text: "Uso intenso",
+  },
+];
+
 export default function About() {
   return (
-    <section id="about" className="relative overflow-hidden px-4 py-16 sm:px-6 lg:px-8 min-[1440px]:py-12">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(162,31,59,0.1),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(20,28,64,0.28),transparent_28%)]" />
+    <section id="about" className="relative overflow-hidden px-4 py-16 sm:px-6 lg:px-8">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(162,31,59,0.12),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(20,28,64,0.32),transparent_30%)]" />
 
       <div className="mx-auto w-full max-w-6xl">
-        <div className="mb-10 text-center">
-          <div id="about-kicker" className="section-kicker mx-auto" style={{ scrollMarginTop: "6.5rem" }}>
-            Sobre nós
+        <div id="about-kicker" className="section-kicker mx-auto mb-8" style={{ scrollMarginTop: "6.5rem" }}>
+          Sobre nós
+        </div>
+
+        <div className="grid gap-8 border-b border-white/10 pb-10 lg:grid-cols-[1.45fr_0.85fr] lg:items-start">
+          <div>
+            <h2 className="font-montserrat text-4xl font-bold leading-[1.05] tracking-0 text-white sm:text-5xl lg:text-[3.35rem]">
+              Tradição em manutenção
+              <span className="block text-[#f0b4bf]">técnica e conforto</span>
+            </h2>
           </div>
-          <h2 className="section-title mt-4">Tradição em manutenção técnica e conforto</h2>
-          <p className="section-subtitle">
+
+          <p className="max-w-md text-base leading-8 text-[#cbcbcb]/82 lg:ml-auto lg:pt-10">
             Atendimento cuidadoso para cadeiras de trabalho, peças, estofados de academia e renovação pontual de sofás.
           </p>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-[1fr_1.15fr] lg:items-stretch min-[1440px]:gap-5">
-          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-4 shadow-[0_18px_42px_rgba(0,0,0,0.2)] sm:p-5 lg:p-6 min-[1440px]:p-3.5">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(162,31,59,0.12),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.02),transparent_55%)]" />
-            <div className="relative flex min-h-[360px] flex-col justify-between overflow-hidden rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(7,17,31,0.65),rgba(7,17,31,0.28))] p-5 sm:p-6 lg:p-8 xl:min-h-[380px] min-[1440px]:min-h-[330px] min-[1440px]:p-5">
-              <div className="flex items-center justify-between gap-3">
-                <div className="section-kicker mb-0 border-white/15 bg-black/20 text-white/80">Desde 1958</div>
-                <div className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/60">
-                  Juiz de Fora
-                </div>
-              </div>
+        <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-white/90">
+          <div className="inline-flex items-center gap-2">
+            <HiOutlineCalendar className="h-4 w-4 text-[#f0b4bf]" />
+            <span>Desde 1974</span>
+            <span className="font-normal text-[#cbcbcb]/65">+50 anos de experiência</span>
+          </div>
+          <div className="inline-flex items-center gap-2">
+            <HiOutlineLocationMarker className="h-4 w-4 text-[#f0b4bf]" />
+            <span>Juiz de Fora, MG</span>
+          </div>
+          <div className="inline-flex items-center gap-2">
+            <HiOutlineStar className="h-4 w-4 text-[#f0b4bf]" />
+            <span>Tradição técnica</span>
+          </div>
+        </div>
 
-              <div className="flex flex-1 items-center justify-center py-8">
-                <img
-                  src="/images/about.png"
-                  alt="Equipe RenovaJF trabalhando"
-                  className="w-full max-w-[260px] object-contain drop-shadow-[0_18px_38px_rgba(0,0,0,0.22)]"
-                />
-              </div>
+        <div className="mt-12 grid gap-8 lg:grid-cols-[1.45fr_0.85fr]">
+          <div>
+            <p className="mb-8 font-poppins text-[11px] font-semibold uppercase tracking-[0.28em] text-[#f0b4bf]">
+              Um pouco da nossa história
+            </p>
 
-              <div className="grid gap-3 sm:grid-cols-3">
-                <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-white/45">Cadeiras</p>
-                  <p className="mt-1 text-sm font-medium text-white/90">Reparo e revenda</p>
+            <div className="relative space-y-10 pl-7 before:absolute before:left-1 before:top-2 before:h-[calc(100%-1rem)] before:w-px before:bg-[#f0b4bf]/18">
+              {timelineItems.map((item) => (
+                <div key={item.year} className="relative">
+                  <span className="absolute -left-[1.85rem] top-1 h-2.5 w-2.5 rounded-full bg-[#f0b4bf] shadow-[0_0_18px_rgba(240,180,191,0.45)]" />
+                  <span className="inline-flex rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-poppins text-[11px] font-semibold uppercase tracking-[0.12em] text-[#f0b4bf]">
+                    {item.year}
+                  </span>
+                  <p className="mt-4 max-w-3xl text-sm leading-7 text-[#e5e7eb]/82 sm:text-base">{item.text}</p>
                 </div>
-                <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-white/45">Peças</p>
-                  <p className="mt-1 text-sm font-medium text-white/90">Reposição ágil</p>
-                </div>
-                <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-white/45">Técnico</p>
-                  <p className="mt-1 text-sm font-medium text-white/90">Uso intenso</p>
-                </div>
-              </div>
+              ))}
+            </div>
+
+            <div className="mt-10 grid gap-3 sm:grid-cols-3">
+              {quickStats.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div key={item.title} className="premium-card flex items-center gap-3 px-4 py-3">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-[#f0b4bf]/15 bg-[#a21f3b]/10 text-[#f0b4bf]">
+                      <Icon className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-white">{item.title}</p>
+                      <p className="text-xs text-[#cbcbcb]/68">{item.text}</p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
-          <div className="space-y-6 min-[1440px]:space-y-5">
-            <div className="premium-panel overflow-hidden p-5 sm:p-6 lg:p-8 min-[1440px]:p-5">
-              <div className="mb-5 flex items-center justify-between gap-4 min-[1440px]:mb-4">
-                <h3 className="font-montserrat text-2xl font-semibold text-white">
-                  Um pouco da nossa história
-                </h3>
-                <span className="hidden rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.26em] text-white/55 sm:inline">
-                  Tradição técnica
-                </span>
+          <aside className="space-y-5">
+            <div className="premium-panel overflow-hidden p-6 text-center">
+              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-[#f0b4bf]/20 bg-[#a21f3b] text-2xl font-bold text-white shadow-[0_0_32px_rgba(162,31,59,0.45)]">
+                JF
               </div>
-
-              <div className="grid gap-4 min-[1440px]:gap-3">
-                <p className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm leading-7 text-[#e5e7eb]/85 sm:text-base">
-                  Nossa trajetória começou em 1958, quando o italiano <span className="font-semibold text-white">Antonio Concolato</span> iniciou o trabalho artesanal de reforma de sofás em sua residência. A experiência passada entre gerações deu origem a uma empresa reconhecida pelo cuidado com estrutura, espuma, acabamento e conforto.
-                </p>
-
-                <p className="rounded-2xl border border-[#f3b0bd]/20 bg-[linear-gradient(180deg,rgba(162,31,59,0.08),rgba(255,255,255,0.03))] p-4 text-sm leading-7 text-[#e5e7eb]/85 sm:text-base">
-                  Hoje, a <span className="font-semibold text-[#f3b0bd]">Renovadora de Estofados JF</span> concentra sua atuação em manutenção, revenda e peças para cadeiras de escritório e trabalho, além da manutenção de estofados técnicos em aparelhos de academia. A renovação de sofás permanece como serviço complementar, com o mesmo padrão de acabamento.
-                </p>
-              </div>
+              <h3 className="mt-5 text-sm font-semibold text-white">Renovadora de Estofados JF</h3>
+              <p className="mt-1 text-xs text-[#cbcbcb]/65">Juiz de Fora · Desde 1974</p>
             </div>
 
-            <div className="grid gap-5 md:grid-cols-2">
-              <div className="premium-card premium-card-hover relative overflow-hidden p-5 text-left">
-                <div className="absolute inset-x-0 top-0 h-1 bg-[#a21f3b]" />
-                <div className="flex items-center gap-3">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-[#a21f3b]/10 text-[#f0b4bf]">
-                    <svg className="h-4.5 w-4.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9-7-9-7-9 7 9 7z" />
-                    </svg>
-                  </div>
-                  <h4 className="text-xl font-semibold text-white">Missão</h4>
+            <div className="premium-card premium-card-hover p-5">
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#f0b4bf]/15 bg-[#a21f3b]/10 text-[#f0b4bf]">
+                  <MdOutlineAdsClick className="h-4.5 w-4.5" />
                 </div>
-                <p className="mt-4 text-sm leading-7 text-[#e5e7eb]/84 sm:text-base min-[1440px]:mt-3 min-[1440px]:leading-6">
-                  Entregar soluções para cadeiras, peças e estofados técnicos com excelência, combinando atendimento comprometido, durabilidade e acabamento profissional.
-                </p>
+                <h3 className="text-lg font-semibold text-white">Missão</h3>
               </div>
-
-              <div className="premium-card premium-card-hover relative overflow-hidden p-5 text-left">
-                <div className="absolute inset-x-0 top-0 h-1 bg-[#141c40]" />
-                <div className="flex items-center gap-3">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-[#a21f3b]/10 text-[#f0b4bf]">
-                    <svg className="h-4.5 w-4.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5c2.485 0 4.5 2.015 4.5 4.5s-2.015 4.5-4.5 4.5-4.5-2.015-4.5-4.5 2.015-4.5 4.5-4.5z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12c2.25-4.5 6.75-7.5 9.75-7.5s7.5 3 9.75 7.5c-2.25 4.5-6.75 7.5-9.75 7.5s-7.5-3-9.75-7.5z" />
-                    </svg>
-                  </div>
-                  <h4 className="text-xl font-semibold text-white">Visão</h4>
-                </div>
-                <p className="mt-4 text-sm leading-7 text-[#e5e7eb]/84 sm:text-base min-[1440px]:mt-3 min-[1440px]:leading-6">
-                  Ser referência em Juiz de Fora para manutenção de cadeiras, fornecimento de peças e serviços técnicos para ambientes de trabalho e academias.
-                </p>
-              </div>
+              <p className="mt-4 text-sm leading-7 text-[#e5e7eb]/82">
+                Entregar soluções para cadeiras, peças e estofados técnicos com excelência, combinando atendimento comprometido,
+                durabilidade e acabamento profissional.
+              </p>
             </div>
-          </div>
+
+            <div className="premium-card premium-card-hover p-5">
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#f0b4bf]/15 bg-[#141c40]/70 text-[#f0b4bf]">
+                  <MdOutlineVisibility className="h-4.5 w-4.5" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">Visão</h3>
+              </div>
+              <p className="mt-4 text-sm leading-7 text-[#e5e7eb]/82">
+                Ser referência em Juiz de Fora para manutenção de cadeiras, fornecimento de peças e serviços técnicos para
+                ambientes de trabalho e academias.
+              </p>
+            </div>
+
+            <div className="hidden rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-sm leading-6 text-[#cbcbcb]/72 lg:block">
+              <HiOutlineSparkles className="mb-3 h-5 w-5 text-[#f0b4bf]" />
+              Acabamento, estrutura e conforto tratados com a mesma atenção artesanal que iniciou a história da empresa.
+            </div>
+          </aside>
         </div>
       </div>
     </section>

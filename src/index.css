@@ -33,6 +33,28 @@
       linear-gradient(180deg, #06101b 0%, #09192d 50%, #050d17 100%);
   }
 
+
+  main > section[id]:not(#hero) {
+    isolation: isolate;
+  }
+
+  main > section[id]:not(#hero)::before {
+    content: "";
+    position: absolute;
+    inset: -1px 0 auto;
+    z-index: 0;
+    height: 8rem;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(7, 17, 31, 0.92), rgba(7, 17, 31, 0.18) 54%, transparent 100%),
+      radial-gradient(ellipse at 50% 0%, rgba(162, 31, 59, 0.13), transparent 62%),
+      radial-gradient(ellipse at 78% 0%, rgba(20, 28, 64, 0.26), transparent 58%);
+  }
+
+  main > section[id]:not(#hero) > * {
+    position: relative;
+    z-index: 1;
+  }
   ::selection {
     background: rgba(162, 31, 59, 0.35);
     color: #fff;
@@ -53,7 +75,7 @@
   }
 
   .section-kicker {
-    @apply mb-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#cbcbcb]/80;
+    @apply mb-3 flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#cbcbcb]/80;
   }
 
   .section-title {
