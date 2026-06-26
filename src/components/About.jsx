@@ -12,8 +12,17 @@ const timelineItems = [
     year: "1974",
     text: (
       <>
-        O italiano <span className="font-semibold text-white">Antônio Concolato</span> inicia o trabalho artesanal de reforma
-        de sofás em sua residência em Juiz de Fora, com atenção minuciosa ao acabamento.
+        <span className="font-semibold text-white">Antônio Concolato</span> iniciou o trabalho manual com conserto de sofás
+        em sua residência e passou suas técnicas aos filhos José e Luiz Concolato.
+      </>
+    ),
+  },
+  {
+    year: "JL Ltda.",
+    text: (
+      <>
+        José e Luiz fundaram a <span className="font-semibold text-white">Renovadora de Estofados JL Ltda.</span>, que atuou por
+        20 anos na Rua Benjamin Constant, consolidando a tradição familiar.
       </>
     ),
   },
@@ -21,8 +30,8 @@ const timelineItems = [
     year: "Hoje",
     text: (
       <>
-        A <span className="font-semibold text-white">Renovadora de Estofados JF</span> concentra sua atuação em manutenção,
-        revenda e peças para cadeiras de escritório e trabalho, aparelhos de academia e renovação pontual de sofás.
+        Após essa trajetória, nasceu a <span className="font-semibold text-white">Renovadora de Estofados JF</span>. Atualmente,
+        Walmer e Wesley Concolato seguem o trabalho na Rua Vitar Maria de Oliveira, mantendo compromisso e qualidade.
       </>
     ),
   },
@@ -91,7 +100,7 @@ export default function About() {
               Um pouco da nossa história
             </p>
 
-            <div className="relative space-y-10 pl-7 before:absolute before:left-1 before:top-[0.5625rem] before:h-[6.5rem] before:w-px before:bg-[linear-gradient(180deg,rgba(240,180,191,0.95)_0%,rgba(240,180,191,0.8)_58%,rgba(240,180,191,0.34)_88%,rgba(240,180,191,0)_100%)] sm:before:h-[6.75rem]">
+            <div className="relative space-y-9 pl-7 before:absolute before:left-1 before:top-[0.5625rem] before:h-[14.75rem] before:w-px before:bg-[linear-gradient(180deg,rgba(240,180,191,0.95)_0%,rgba(240,180,191,0.82)_58%,rgba(240,180,191,0.42)_88%,rgba(240,180,191,0)_100%)] sm:before:h-[15.5rem]">
               {timelineItems.map((item) => (
                 <div key={item.year} className="relative">
                   <span className="absolute -left-[1.85rem] top-1 h-2.5 w-2.5 rounded-full bg-[#f0b4bf] shadow-[0_0_18px_rgba(240,180,191,0.45)]" />

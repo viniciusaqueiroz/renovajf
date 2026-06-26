@@ -11,9 +11,10 @@ const heroSlides = [
 // Ajuste aqui para escurecer ou clarear a Hero sem mexer na estrutura.
 const HERO_BASE_OVERLAY_OPACITY = 0.10;
 const HERO_LINEAR_OVERLAY =
-  "linear-gradient(90deg, rgba(3,8,16,0.95) 0%, rgba(3,8,16,0.9) 38%, rgba(3,8,16,0.82) 68%, rgba(3,8,16,0.7) 100%)";
+  "linear-gradient(90deg, rgba(3,8,16,0.78) 0%, rgba(3,8,16,0.72) 38%, rgba(3,8,16,0.62) 68%, rgba(3,8,16,0.48) 100%)";
+
 const HERO_RADIAL_OVERLAY =
-  "radial-gradient(circle at center, rgba(3,8,16,0.08) 0%, rgba(3,8,16,0.34) 55%, rgba(3,8,16,0.62) 100%)";
+  "radial-gradient(circle at center, rgba(3,8,16,0.04) 0%, rgba(3,8,16,0.22) 55%, rgba(3,8,16,0.42) 100%)";
 
 const slideStyle = (isActive) => ({
   opacity: isActive ? 1 : 0,
