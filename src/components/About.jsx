@@ -2,7 +2,6 @@ import {
   HiOutlineCalendar,
   HiOutlineCube,
   HiOutlineLocationMarker,
-  HiOutlineSparkles,
   HiOutlineStar,
 } from "react-icons/hi";
 import { FaChair, FaTools } from "react-icons/fa";
@@ -92,7 +91,7 @@ export default function About() {
               Um pouco da nossa história
             </p>
 
-            <div className="relative space-y-10 pl-7 before:absolute before:left-1 before:top-2 before:h-[calc(100%-1rem)] before:w-px before:bg-[#f0b4bf]/18">
+            <div className="relative space-y-10 pl-7 before:absolute before:left-1 before:top-[0.5625rem] before:h-[6.5rem] before:w-px before:bg-[linear-gradient(180deg,rgba(240,180,191,0.95)_0%,rgba(240,180,191,0.8)_58%,rgba(240,180,191,0.34)_88%,rgba(240,180,191,0)_100%)] sm:before:h-[6.75rem]">
               {timelineItems.map((item) => (
                 <div key={item.year} className="relative">
                   <span className="absolute -left-[1.85rem] top-1 h-2.5 w-2.5 rounded-full bg-[#f0b4bf] shadow-[0_0_18px_rgba(240,180,191,0.45)]" />
@@ -122,44 +121,39 @@ export default function About() {
             </div>
           </div>
 
-          <aside className="space-y-5">
-            <div className="premium-panel overflow-hidden p-6 text-center">
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-[#f0b4bf]/20 bg-[#a21f3b] text-2xl font-bold text-white shadow-[0_0_32px_rgba(162,31,59,0.45)]">
+          <aside className="space-y-4 lg:self-start">
+            <div className="premium-panel overflow-hidden p-5 text-center">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-[#f0b4bf]/20 bg-[#a21f3b] text-2xl font-bold text-white shadow-[0_0_32px_rgba(162,31,59,0.45)]">
                 JF
               </div>
-              <h3 className="mt-5 text-sm font-semibold text-white">Renovadora de Estofados JF</h3>
+              <h3 className="mt-4 text-sm font-semibold text-white">Renovadora de Estofados JF</h3>
               <p className="mt-1 text-xs text-[#cbcbcb]/65">Juiz de Fora · Desde 1974</p>
             </div>
 
-            <div className="premium-card premium-card-hover p-5">
+            <div className="premium-card premium-card-hover p-4">
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#f0b4bf]/15 bg-[#a21f3b]/10 text-[#f0b4bf]">
+                <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-[#f0b4bf]/15 bg-[#a21f3b]/10 text-[#f0b4bf]">
                   <MdOutlineAdsClick className="h-4.5 w-4.5" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">Missão</h3>
               </div>
-              <p className="mt-4 text-sm leading-7 text-[#e5e7eb]/82">
+              <p className="mt-3 text-sm leading-6 text-[#e5e7eb]/82">
                 Entregar soluções para cadeiras, peças e estofados técnicos com excelência, combinando atendimento comprometido,
                 durabilidade e acabamento profissional.
               </p>
             </div>
 
-            <div className="premium-card premium-card-hover p-5">
+            <div className="premium-card premium-card-hover p-4">
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#f0b4bf]/15 bg-[#141c40]/70 text-[#f0b4bf]">
+                <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-[#f0b4bf]/15 bg-[#141c40]/70 text-[#f0b4bf]">
                   <MdOutlineVisibility className="h-4.5 w-4.5" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">Visão</h3>
               </div>
-              <p className="mt-4 text-sm leading-7 text-[#e5e7eb]/82">
+              <p className="mt-3 text-sm leading-6 text-[#e5e7eb]/82">
                 Ser referência em Juiz de Fora para manutenção de cadeiras, fornecimento de peças e serviços técnicos para
                 ambientes de trabalho e academias.
               </p>
-            </div>
-
-            <div className="hidden rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-sm leading-6 text-[#cbcbcb]/72 lg:block">
-              <HiOutlineSparkles className="mb-3 h-5 w-5 text-[#f0b4bf]" />
-              Acabamento, estrutura e conforto tratados com a mesma atenção artesanal que iniciou a história da empresa.
             </div>
           </aside>
         </div>
