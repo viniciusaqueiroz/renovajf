@@ -1,4 +1,4 @@
-﻿import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -40,9 +40,9 @@ const partners = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative px-4 py-16 sm:px-6 lg:px-8">
+    <section id="services" className="relative px-4 py-16 sm:px-6 lg:px-8 min-[1440px]:py-12">
       <div className="mx-auto w-full max-w-6xl">
-        <div className="mb-10 text-center">
+        <div className="mb-10 text-center min-[1440px]:mb-8">
           <div id="services-kicker" className="section-kicker mx-auto" style={{ scrollMarginTop: "6.5rem" }}>
             Soluções
           </div>
@@ -52,19 +52,19 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4 min-[1440px]:gap-4">
           {services.map((service) => (
-            <div key={service.title} className="premium-card premium-card-hover h-full p-5 text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5">
-                <img src={service.icon} alt={service.title} className="h-8 w-8 object-contain filter invert brightness-0" />
+            <div key={service.title} className="premium-card premium-card-hover h-full p-5 text-center min-[1440px]:p-4">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 min-[1440px]:mb-3 min-[1440px]:h-12 min-[1440px]:w-12">
+                <img src={service.icon} alt={service.title} className="h-8 w-8 object-contain filter invert brightness-0 min-[1440px]:h-7 min-[1440px]:w-7" />
               </div>
               <h3 className="text-lg font-semibold text-white">{service.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-[#e5e7eb]/85 sm:text-base">{service.text}</p>
+              <p className="mt-3 text-sm leading-7 text-[#e5e7eb]/85 sm:text-base min-[1440px]:mt-2 min-[1440px]:leading-6">{service.text}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-10 flex justify-center min-[1440px]:mt-8">
           <a
             href={siteConfig.catalogPdf}
             target="_blank"
@@ -75,12 +75,12 @@ export default function Services() {
           </a>
         </div>
 
-        <div className="mt-14">
-          <div className="mb-6 text-center">
+        <div className="mt-14 min-[1440px]:mt-10">
+          <div className="mb-6 text-center min-[1440px]:mb-4">
             <h3 className="text-2xl font-semibold text-white">Nossos Parceiros</h3>
           </div>
 
-          <div className="premium-panel p-4 sm:p-5">
+          <div className="premium-panel p-4 sm:p-5 min-[1440px]:p-4">
             <Swiper
               modules={[Autoplay]}
               autoplay={{ delay: 2000, disableOnInteraction: false }}
@@ -96,7 +96,7 @@ export default function Services() {
             >
               {partners.map((partner) => (
                 <SwiperSlide key={partner.alt}>
-                  <div className="flex h-24 items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-4 py-4 backdrop-blur-md">
+                  <div className="flex h-24 items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-4 py-4 backdrop-blur-md min-[1440px]:h-20 min-[1440px]:py-3">
                     <img src={partner.src} alt={partner.alt} className={`${partner.className} object-contain ${partner.src.endsWith('.png') ? 'filter invert brightness-0' : ''}`} />
                   </div>
                 </SwiperSlide>

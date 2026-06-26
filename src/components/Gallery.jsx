@@ -52,9 +52,9 @@ export default function Gallery() {
   }, [selectedIndex]);
 
   return (
-    <section id="gallery" className="relative px-4 py-16 sm:px-6 lg:px-8">
+    <section id="gallery" className="relative px-4 py-16 sm:px-6 lg:px-8 min-[1440px]:py-12">
       <div className="mx-auto w-full max-w-6xl">
-        <div className="mb-10 text-center">
+        <div className="mb-10 text-center min-[1440px]:mb-8">
           <div id="gallery-kicker" className="section-kicker mx-auto" style={{ scrollMarginTop: "6.5rem" }}>
             Galeria
           </div>
@@ -64,13 +64,13 @@ export default function Gallery() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5 min-[1440px]:gap-3">
           {visibleImages.map((item, index) => (
             <button
               key={item.src}
               type="button"
               onClick={() => openImage(index)}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-left shadow-[0_12px_28px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-0.5 hover:border-white/20 hover:shadow-[0_16px_36px_rgba(0,0,0,0.24)]"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-left shadow-[0_12px_28px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-0.5 hover:border-white/20 hover:shadow-[0_16px_36px_rgba(0,0,0,0.24)] min-[1440px]:rounded-xl"
             >
               <div className="relative aspect-[4/5] overflow-hidden">
                 <img
@@ -95,7 +95,7 @@ export default function Gallery() {
           ))}
         </div>
 
-        <div className="mt-8 flex justify-center">
+        <div className="mt-8 flex justify-center min-[1440px]:mt-6">
           <button
             type="button"
             onClick={() => setVisibleCount(hasMore ? Math.min(allImages.length, visibleCount + BATCH_SIZE) : INITIAL_VISIBLE)}

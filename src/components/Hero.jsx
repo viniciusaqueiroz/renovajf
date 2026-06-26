@@ -50,7 +50,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="relative flex min-h-[92svh] overflow-hidden px-4 pt-24 sm:px-6 lg:px-10 xl:px-12">
+    <section id="hero" className="relative flex min-h-[clamp(720px,92svh,900px)] overflow-hidden px-4 pt-24 sm:px-6 lg:px-10 xl:px-12 min-[1440px]:min-h-[78svh]">
       <div className="absolute inset-0">
         {heroSlides.map((src, index) => (
           <img
@@ -71,7 +71,7 @@ export default function Hero() {
         <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#07111f] to-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-center pb-20 pt-8 text-center sm:pb-24 lg:pb-28">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-center pb-20 pt-8 text-center sm:pb-24 lg:pb-28 min-[1440px]:pb-16 min-[1440px]:pt-4">
         <div className="mx-auto max-w-3xl">
           <div
             id="hero-kicker"
@@ -82,18 +82,18 @@ export default function Hero() {
           </div>
 
           <h1
-            className="mt-4 max-w-3xl font-montserrat text-5xl font-bold leading-none text-white sm:text-6xl lg:text-7xl"
+            className="mt-4 max-w-3xl font-montserrat text-4xl font-bold leading-none text-white sm:text-5xl lg:text-6xl min-[1440px]:text-[3.6rem] 2xl:text-[4.05rem]"
             style={{ textShadow: "0 18px 40px rgba(0,0,0,0.58)" }}
           >
             Cadeiras, peças e manutenção para ambientes de trabalho
           </h1>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[#ebefff]/90 sm:text-lg lg:text-xl">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[#ebefff]/90 sm:text-lg lg:text-xl min-[1440px]:mt-4 min-[1440px]:text-[1.02rem] min-[1440px]:leading-7">
             A <span className="font-semibold text-white">{siteConfig.siteName}</span> atende escritórios, empresas e academias
             com manutenção, revenda e reposição de peças para cadeiras e estofados técnicos.
           </p>
 
-          <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
+          <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row sm:items-center min-[1440px]:mt-6">
             <a
               href={siteConfig.whatsappLink}
               target="_blank"
@@ -114,7 +114,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mx-auto mt-8 grid max-w-2xl gap-4 sm:grid-cols-3">
+          <div className="mx-auto mt-8 grid max-w-2xl gap-4 sm:grid-cols-3 min-[1440px]:mt-6 min-[1440px]:gap-3">
             <div className="border-t border-white/20 pt-4">
               <p className="text-[10px] uppercase tracking-[0.3em] text-white/45">Cadeiras</p>
               <p className="mt-1 text-sm font-medium text-white/90">Manutenção e revenda</p>
