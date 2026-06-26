@@ -122,17 +122,7 @@
   }
 }
 
-@media (min-width: 1024px) {
-  #hero {
-    min-height: clamp(720px, 92svh, 900px);
-  }
-}
 
-@media (min-width: 1280px) {
-  #hero {
-    min-height: 84svh;
-  }
-}
 
 @keyframes fadeIn {
   from {
@@ -186,24 +176,5 @@
   50% {
     opacity: 0.78;
     transform: scale(1.06);
-  }
-}
-
-@media (min-width: 1440px) {
-  .section-title {
-    font-size: clamp(1.75rem, 1vw + 1.2rem, 2.5rem);
-  }
-
-  .section-subtitle {
-    @apply mt-2 max-w-xl text-sm leading-6;
-  }
-
-  .section-kicker {
-    @apply px-3 py-1.5 text-[10px] tracking-[0.24em];
-  }
-
-  .premium-panel,
-  .premium-card {
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
   }
 }
