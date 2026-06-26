@@ -100,7 +100,7 @@ export default function About() {
               Um pouco da nossa história
             </p>
 
-            <div className="relative space-y-9 pl-7 before:absolute before:left-1 before:top-[0.5625rem] before:h-[14.75rem] before:w-px before:bg-[linear-gradient(180deg,rgba(240,180,191,0.95)_0%,rgba(240,180,191,0.82)_58%,rgba(240,180,191,0.42)_88%,rgba(240,180,191,0)_100%)] sm:before:h-[15.5rem]">
+            <div className="relative space-y-9 pl-7 before:absolute before:bottom-4 before:left-1 before:top-[0.5625rem] before:w-px before:bg-[linear-gradient(180deg,rgba(240,180,191,0.95)_0%,rgba(240,180,191,0.82)_58%,rgba(240,180,191,0.42)_88%,rgba(240,180,191,0)_100%)]">
               {timelineItems.map((item) => (
                 <div key={item.year} className="relative">
                   <span className="absolute -left-[1.85rem] top-1 h-2.5 w-2.5 rounded-full bg-[#f0b4bf] shadow-[0_0_18px_rgba(240,180,191,0.45)]" />
